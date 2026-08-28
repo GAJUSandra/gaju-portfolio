@@ -333,14 +333,18 @@ function Portfolio() {
             <p className="mt-2 break-all">{profile.email}</p>
           </a>
           <a
-            href={`tel:${profile.phone.replace(/\s/g, "")}`}
+            href={`https://wa.me/${profile.whatsapp}`}
+            target="_blank"
+            rel="noreferrer"
             className="rounded-lg border border-border bg-surface p-5 transition-colors hover:border-primary"
           >
-            <span className="section-label">Phone</span>
+            <span className="section-label">WhatsApp</span>
             <p className="mt-2">{profile.phone}</p>
           </a>
           <a
             href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
             className="rounded-lg border border-border bg-surface p-5 transition-colors hover:border-primary"
           >
             <span className="section-label">LinkedIn</span>
@@ -348,10 +352,12 @@ function Portfolio() {
           </a>
           <a
             href={profile.github}
+            target="_blank"
+            rel="noreferrer"
             className="rounded-lg border border-border bg-surface p-5 transition-colors hover:border-primary"
           >
             <span className="section-label">GitHub</span>
-            <p className="mt-2">@gajusandra</p>
+            <p className="mt-2">@gaju-sandra</p>
           </a>
         </div>
       </Section>
