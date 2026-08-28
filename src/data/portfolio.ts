@@ -1,3 +1,27 @@
+import nexaAsset from "@/assets/image-2.png.asset.json";
+import carepromptAsset from "@/assets/image-3.png.asset.json";
+import filmfanAsset from "@/assets/image-4.png.asset.json";
+import mcAsset from "@/assets/image-5.png.asset.json";
+import gmsAsset from "@/assets/image-6.png.asset.json";
+import codersAsset from "@/assets/image-7.png.asset.json";
+import zazaAsset from "@/assets/image-8.png.asset.json";
+
+const nexa = nexaAsset.url;
+const careprompt = carepromptAsset.url;
+const filmfan = filmfanAsset.url;
+const gms = gmsAsset.url;
+export const mcPhoto = { url: mcAsset.url, alt: "GAJU Sandra hosting a cultural event at AUCA, speaking into a microphone" };
+export const leadershipPhotos: Record<string, { url: string; alt: string }> = {
+  "Facilitator — 1 Million Rwandan Coders Program": {
+    url: codersAsset.url,
+    alt: "Group photo with students after a 1 Million Rwandan Coders facilitation session",
+  },
+  "Leader — Debating Club": {
+    url: zazaAsset.url,
+    alt: "Moments from student leadership and event hosting at Lycee de Zaza",
+  },
+};
+
 export const profile = {
   name: "GAJU Sandra",
   title: "Software Developer · Software Engineering Student",
@@ -55,6 +79,8 @@ export type Project = {
   tech: string[];
   features: string[];
   learned: string;
+  image?: string;
+  imageAlt?: string;
   github?: string;
   demo?: string;
 };
@@ -77,6 +103,8 @@ export const projects: Project[] = [
     ],
     learned:
       "That constraints shape architecture. Deciding 'this has to work offline' changed almost every other decision that came after it, and translating an interface properly is a design problem, not just a text swap.",
+    image: careprompt,
+    imageAlt: "CarePrompt mobile app home screen with health training categories and search",
   },
   {
     name: "Nexa Event Management System",
@@ -93,38 +121,42 @@ export const projects: Project[] = [
     ],
     learned:
       "How to structure a backend around real entities and relationships, and how much easier the frontend becomes when the data model is thought through first.",
+    image: nexa,
+    imageAlt: "Nexa dashboard showing trending events, categories and a hero banner",
   },
   {
-    name: "AUCA Library Management System",
-    tagline: "Borrowing, returning, and tracking books without the paper trail.",
+    name: "GMS Rwanda — Gathering Management System",
+    tagline:
+      "A web app for running gatherings in Rwanda: events, budgets, expenses, vendors, attendees and tasks in one place.",
     problem:
-      "Manual library records make it hard to know what's available, what's overdue, and who has what.",
+      "Organizers juggle budgets, vendors, tasks and attendee lists across spreadsheets and chats, so nobody can see the real state of an event — especially what has actually been spent.",
     role:
-      "I worked on the core management features — adding books, handling borrow and return operations — and on the database queries behind them.",
-    tech: ["Java", "MySQL", "SQL"],
+      "I worked across the stack: the Spring Boot REST API with JWT authentication, the PostgreSQL schema with Flyway migrations, and the React dashboard that consumes the API and renders the analytics.",
+    tech: [
+      "Java 17",
+      "Spring Boot 3.2",
+      "PostgreSQL 16",
+      "Flyway",
+      "JWT (jjwt)",
+      "React 19 + Vite",
+      "Axios",
+      "Recharts",
+      "jsPDF + xlsx",
+      "Nginx",
+      "Docker Compose",
+    ],
     features: [
-      "Book catalogue with add, update, and search",
-      "Borrow and return tracking",
-      "Reports on availability and borrowed items",
+      "Register and log in with JWT — the token is sent with every request to prove identity",
+      "Create events and track budget vs. spend per event",
+      "Manage expenses, vendors, attendees and tasks",
+      "Admin view with system-wide users and analytics",
+      "Charts with Recharts, plus PDF and Excel exports",
+      "Backend, frontend and database run together with one Docker Compose command",
     ],
     learned:
-      "Writing queries that stay correct under real use, and the value of validating input before it reaches the database.",
-  },
-  {
-    name: "Student Management System",
-    tagline: "A CRUD system for student records, built to learn the fundamentals properly.",
-    problem:
-      "Keeping student information consistent across registration, courses, and results is tedious when it's done by hand.",
-    role:
-      "I built the record management features and the database schema, and handled the forms and validation on the interface side.",
-    tech: ["Java", "MySQL", "SQL"],
-    features: [
-      "Add, edit, search, and delete student records",
-      "Course and result information linked to students",
-      "Input validation on entry forms",
-    ],
-    learned:
-      "This was where CRUD stopped being a word from a lecture and became something I could build end to end.",
+      "How the pieces of a real stack fit: Java API, React client, PostgreSQL storage, all containerised. Also that stateless auth with JWT forces you to be deliberate about what every request carries.",
+    image: gms,
+    imageAlt: "GMS Rwanda dashboard with event totals, budget charts and expense overview",
   },
   {
     name: "Film Fan — Movie Website",
@@ -141,6 +173,8 @@ export const projects: Project[] = [
     ],
     learned:
       "Handling loading and error states properly. My first version looked broken whenever the request was slow, and fixing that taught me more than the happy path did.",
+    image: filmfan,
+    imageAlt: "Film Fan website showing a trending movies grid in a dark gold theme",
   },
   {
     name: "Flosun Flower Shop",
@@ -173,21 +207,6 @@ export const projects: Project[] = [
     ],
     learned:
       "Mobile layout thinking is different from web. Screen space is tight and every extra tap counts.",
-  },
-  {
-    name: "Quiz App",
-    tagline: "A small quiz application, and a good lesson in state.",
-    problem:
-      "I wanted something simple enough to finish but tricky enough to force me to manage state properly.",
-    role: "I built it end to end — questions, scoring, and the result screen.",
-    tech: ["JavaScript", "React.js", "HTML5", "CSS3"],
-    features: [
-      "Question flow with multiple choice answers",
-      "Score tracking and final results",
-      "Restart without reloading the page",
-    ],
-    learned:
-      "How component state actually behaves, and why keeping one source of truth saves you from strange bugs later.",
   },
 ];
 
