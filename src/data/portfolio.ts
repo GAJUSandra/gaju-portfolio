@@ -4,8 +4,9 @@ export const profile = {
   location: "Kicukiro, Kigali, Rwanda",
   email: "gajusandra872@gmail.com",
   phone: "+250 785 973 658",
-  linkedin: "https://www.linkedin.com/in/gaju-sandra",
-  github: "https://github.com/gajusandra",
+  linkedin: "https://www.linkedin.com/in/gaju-sandra-32838a26a",
+  github: "https://github.com/gaju-sandra",
+  whatsapp: "250785973658",
   intro:
     "I'm an Information Technology student at AUCA, specializing in Software Engineering. Most of what I know I picked up by building things — web apps, small systems, and projects I kept breaking and fixing until they worked. I'm just as comfortable in front of a room as I am in front of an editor, which is something I've built up through club work, facilitating coding sessions, and MC-ing events.",
 };
