@@ -215,7 +215,10 @@ export const projects: Project[] = [
     ],
     learned:
       "Mobile layout thinking is different from web. Screen space is tight and every extra tap counts.",
+    image: eatup,
+    imageAlt: "Eat Up food ordering app home screen with an order call to action and dish stats",
   },
+
 ];
 
 export const experience = [
