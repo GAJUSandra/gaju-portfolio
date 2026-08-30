@@ -308,6 +308,13 @@ function Portfolio() {
       {/* MC / Speaking */}
       <Section id="speaking" label="MC & Public Speaking" title="Comfortable with a microphone">
         <p className="max-w-3xl text-base leading-relaxed text-muted-foreground">{mc.intro}</p>
+        <img
+          src={mcPhoto.url}
+          alt={mcPhoto.alt}
+          loading="lazy"
+          className="mt-8 w-full rounded-lg border border-border object-cover"
+        />
+
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {mc.skills.map((s) => (
             <div key={s.label} className="rounded-lg border border-border bg-surface p-5">
