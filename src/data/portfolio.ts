@@ -16,6 +16,8 @@ const filmfan = filmfanAsset.url;
 const gms = gmsAsset.url;
 const eatup = eatupAsset.url;
 const flosun = flosunAsset.url;
+const ndabaga = ndabagaAsset.url;
+
 
 export const mcPhoto = { url: mcAsset.url, alt: "GAJU Sandra hosting a cultural event at AUCA, speaking into a microphone" };
 export const leadershipPhotos: Record<string, { url: string; alt: string }> = {
