@@ -29,7 +29,12 @@ export const leadershipPhotos: Record<string, { url: string; alt: string }> = {
     url: zazaAsset.url,
     alt: "Moments from student leadership and event hosting at Lycee de Zaza",
   },
+  "Volunteer — Ndabaga Impact": {
+    url: ndabagaAsset.url,
+    alt: "Group photo with participants during a Ndabaga Impact community activity",
+  },
 };
+
 
 export const profile = {
   name: "GAJU Sandra",
