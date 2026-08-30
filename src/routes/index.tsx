@@ -9,9 +9,12 @@ import {
   experience,
   leadership,
   mc,
+  mcPhoto,
+  leadershipPhotos,
   learning,
   philosophy,
 } from "@/data/portfolio";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
