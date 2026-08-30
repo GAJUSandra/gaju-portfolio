@@ -9,9 +9,12 @@ import {
   experience,
   leadership,
   mc,
+  mcPhoto,
+  leadershipPhotos,
   learning,
   philosophy,
 } from "@/data/portfolio";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -185,6 +188,16 @@ function Portfolio() {
               </div>
               <p className="mt-2 text-base text-foreground">{p.tagline}</p>
 
+              {p.image && (
+                <img
+                  src={p.image}
+                  alt={p.imageAlt ?? `${p.name} screenshot`}
+                  loading="lazy"
+                  className="mt-6 w-full rounded-lg border border-border bg-surface-raised object-cover"
+                />
+              )}
+
+
               <dl className="mt-6 grid gap-5 sm:grid-cols-2">
                 <div>
                   <dt className="section-label">The problem</dt>
@@ -278,6 +291,15 @@ function Portfolio() {
               </div>
               <p className="mt-1 text-sm text-primary">{l.org}</p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{l.body}</p>
+              {leadershipPhotos[l.role] && (
+                <img
+                  src={leadershipPhotos[l.role]!.url}
+                  alt={leadershipPhotos[l.role]!.alt}
+                  loading="lazy"
+                  className="mt-5 w-full rounded-lg border border-border object-cover"
+                />
+              )}
+
             </div>
           ))}
         </div>
@@ -286,6 +308,13 @@ function Portfolio() {
       {/* MC / Speaking */}
       <Section id="speaking" label="MC & Public Speaking" title="Comfortable with a microphone">
         <p className="max-w-3xl text-base leading-relaxed text-muted-foreground">{mc.intro}</p>
+        <img
+          src={mcPhoto.url}
+          alt={mcPhoto.alt}
+          loading="lazy"
+          className="mt-8 w-full rounded-lg border border-border object-cover"
+        />
+
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {mc.skills.map((s) => (
             <div key={s.label} className="rounded-lg border border-border bg-surface p-5">

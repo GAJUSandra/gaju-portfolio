@@ -5,11 +5,16 @@ import mcAsset from "@/assets/image-5.png.asset.json";
 import gmsAsset from "@/assets/image-6.png.asset.json";
 import codersAsset from "@/assets/image-7.png.asset.json";
 import zazaAsset from "@/assets/image-8.png.asset.json";
+import eatupAsset from "@/assets/eatup.png.asset.json";
+import flosunAsset from "@/assets/flosun.png.asset.json";
 
 const nexa = nexaAsset.url;
 const careprompt = carepromptAsset.url;
 const filmfan = filmfanAsset.url;
 const gms = gmsAsset.url;
+const eatup = eatupAsset.url;
+const flosun = flosunAsset.url;
+
 export const mcPhoto = { url: mcAsset.url, alt: "GAJU Sandra hosting a cultural event at AUCA, speaking into a microphone" };
 export const leadershipPhotos: Record<string, { url: string; alt: string }> = {
   "Facilitator — 1 Million Rwandan Coders Program": {
@@ -191,7 +196,10 @@ export const projects: Project[] = [
     ],
     learned:
       "That layout and clarity are part of the functionality. If someone can't tell what's for sale, nothing else about the code matters.",
+    image: flosun,
+    imageAlt: "Flosun flower shop homepage with a Kigali florist hero and bouquet listings",
   },
+
   {
     name: "Eat Up",
     tagline: "A food ordering app, and my first proper build in Flutter.",
@@ -207,7 +215,10 @@ export const projects: Project[] = [
     ],
     learned:
       "Mobile layout thinking is different from web. Screen space is tight and every extra tap counts.",
+    image: eatup,
+    imageAlt: "Eat Up food ordering app home screen with an order call to action and dish stats",
   },
+
 ];
 
 export const experience = [
