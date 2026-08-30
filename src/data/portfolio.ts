@@ -196,7 +196,10 @@ export const projects: Project[] = [
     ],
     learned:
       "That layout and clarity are part of the functionality. If someone can't tell what's for sale, nothing else about the code matters.",
+    image: flosun,
+    imageAlt: "Flosun flower shop homepage with a Kigali florist hero and bouquet listings",
   },
+
   {
     name: "Eat Up",
     tagline: "A food ordering app, and my first proper build in Flutter.",
