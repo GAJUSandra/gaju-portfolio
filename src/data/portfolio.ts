@@ -7,6 +7,8 @@ import codersAsset from "@/assets/image-7.png.asset.json";
 import zazaAsset from "@/assets/image-8.png.asset.json";
 import eatupAsset from "@/assets/eatup.png.asset.json";
 import flosunAsset from "@/assets/flosun.png.asset.json";
+import ndabagaAsset from "@/assets/ndabaga.png.asset.json";
+
 
 const nexa = nexaAsset.url;
 const careprompt = carepromptAsset.url;
