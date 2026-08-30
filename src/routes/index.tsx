@@ -185,6 +185,16 @@ function Portfolio() {
               </div>
               <p className="mt-2 text-base text-foreground">{p.tagline}</p>
 
+              {p.image && (
+                <img
+                  src={p.image}
+                  alt={p.imageAlt ?? `${p.name} screenshot`}
+                  loading="lazy"
+                  className="mt-6 w-full rounded-lg border border-border bg-surface-raised object-cover"
+                />
+              )}
+
+
               <dl className="mt-6 grid gap-5 sm:grid-cols-2">
                 <div>
                   <dt className="section-label">The problem</dt>
