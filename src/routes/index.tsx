@@ -291,6 +291,15 @@ function Portfolio() {
               </div>
               <p className="mt-1 text-sm text-primary">{l.org}</p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{l.body}</p>
+              {leadershipPhotos[l.role] && (
+                <img
+                  src={leadershipPhotos[l.role]!.url}
+                  alt={leadershipPhotos[l.role]!.alt}
+                  loading="lazy"
+                  className="mt-5 w-full rounded-lg border border-border object-cover"
+                />
+              )}
+
             </div>
           ))}
         </div>
