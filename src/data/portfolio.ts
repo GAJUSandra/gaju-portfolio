@@ -7,6 +7,8 @@ import codersAsset from "@/assets/image-7.png.asset.json";
 import zazaAsset from "@/assets/image-8.png.asset.json";
 import eatupAsset from "@/assets/eatup.png.asset.json";
 import flosunAsset from "@/assets/flosun.png.asset.json";
+import ndabagaAsset from "@/assets/ndabaga.png.asset.json";
+
 
 const nexa = nexaAsset.url;
 const careprompt = carepromptAsset.url;
@@ -14,6 +16,8 @@ const filmfan = filmfanAsset.url;
 const gms = gmsAsset.url;
 const eatup = eatupAsset.url;
 const flosun = flosunAsset.url;
+const ndabaga = ndabagaAsset.url;
+
 
 export const mcPhoto = { url: mcAsset.url, alt: "GAJU Sandra hosting a cultural event at AUCA, speaking into a microphone" };
 export const leadershipPhotos: Record<string, { url: string; alt: string }> = {
@@ -25,7 +29,12 @@ export const leadershipPhotos: Record<string, { url: string; alt: string }> = {
     url: zazaAsset.url,
     alt: "Moments from student leadership and event hosting at Lycee de Zaza",
   },
+  "Volunteer — Ndabaga Impact": {
+    url: ndabagaAsset.url,
+    alt: "Group photo with participants during a Ndabaga Impact community activity",
+  },
 };
+
 
 export const profile = {
   name: "GAJU Sandra",
@@ -254,11 +263,18 @@ export const leadership = [
     body: "I supported debate training and events — helping with sessions, logistics, and keeping participants organized.",
   },
   {
+    role: "Volunteer — Ndabaga Impact",
+    org: "Ndabaga Impact",
+    period: "",
+    body: "Community volunteering with Ndabaga Impact — supporting youth activities and programmes on the ground.",
+  },
+  {
     role: "Prefect in Charge of Entertainment",
     org: "Lycée de Zaza",
     period: "2019 – 2022",
     body: "A student leadership role where I organized entertainment activities for the school, from planning through to running them.",
   },
+
   {
     role: "Leader — Debating Club",
     org: "Lycée de Zaza",
