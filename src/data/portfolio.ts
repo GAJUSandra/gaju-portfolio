@@ -263,11 +263,18 @@ export const leadership = [
     body: "I supported debate training and events — helping with sessions, logistics, and keeping participants organized.",
   },
   {
+    role: "Volunteer — Ndabaga Impact",
+    org: "Ndabaga Impact",
+    period: "",
+    body: "Community volunteering with Ndabaga Impact — supporting youth activities and programmes on the ground.",
+  },
+  {
     role: "Prefect in Charge of Entertainment",
     org: "Lycée de Zaza",
     period: "2019 – 2022",
     body: "A student leadership role where I organized entertainment activities for the school, from planning through to running them.",
   },
+
   {
     role: "Leader — Debating Club",
     org: "Lycée de Zaza",
